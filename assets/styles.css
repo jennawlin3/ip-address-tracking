@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --very-dark-gray: hsl(0, 0%, 17%);
+    --dark-gray: hsl(0, 0%, 59%);
+    font-size: 18px;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#ip-info-section {
+    background: url(../images/pattern-bg-mobile.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 40px;
+    position: relative;
+}
+
+#ip-info-section h1 {
+    color: #fff;
+    font-weight: 500;
+}
+
+#ip-search_form {
+    display: flex;
+    position: relative; 
+    width: 90%;
+    justify-content: center;
+}
+
+#ip-search_form input, #ip-search_form button {
+    height: 50px;
+}
+
+#ip-search_form input[type="search"] {
+    width: 80%;
+    border-radius: 15px 0 0 15px;
+    border: none;
+    padding-left: 20px;
+    outline: none;
+    font-family: "Rubik", sans-serif;
+    cursor: pointer;
+}
+
+#ip-search_form button {
+    background-color: #000;
+    border-radius: 0 15px 15px 0;
+    width: 15%;
+    cursor: pointer;
+    border: none;
+}
+
+#ip-search_form button:hover {
+    background-color: var(--dark-gray);
+}
+
+.ip-info {
+    position: absolute;
+    background-color: #fff;
+    width: 85%;
+    top: 170px;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    z-index: 999;
+}
+
+.ip-info p {
+    color: var(--dark-gray);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.ip-info h2 {
+    color: var(--very-dark-gray);
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#map {
+    height: 600px;
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    #ip-info-section {
+        background: url(../images/pattern-bg-desktop.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        max-width: 1900px;
+        height: 250px;
+    }
+
+    #ip-search_form {
+        width: 60%;
+        max-width: 700px;
+    }
+
+    #ip-search_form input[type="search"] {
+        width: 90%;
+        max-width: 640px;
+    }
+
+    #ip-search_form button {
+        width: 10%;
+        max-width: 60px;
+    }
+
+    .ip-info {
+        flex-direction: row;
+        gap: 60px;
+        width: 95%;
+        max-width: 1100px;
+        height: 150px;
+        top: 180px;
+    }
+
+    .ip-info div:not(:last-of-type) {
+        border-right: 1px solid #ddd;
+        padding-right: 50px;
+        height: 70px;
+    }
+
+    .ip-info p {
+        text-align: start;
+    }
+
+    .ip-info h2 {
+        width: 150px;
+        text-align: start;
+    }
+    
+    #map {
+        max-width: 1900px;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    #ip-info-section {
+        border-radius: 20px 20px 0 0;
+    }
+
+    #map {
+        border-radius: 0 0 20px 20px;
+    }
+}
