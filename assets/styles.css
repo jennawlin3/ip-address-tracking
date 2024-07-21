@@ -59,14 +59,25 @@ body {
     height: 50px;
 }
 
-#ip-search_form input[type="search"] {
-    width: 80%;
-    border-radius: 15px 0 0 15px;
-    border: none;
-    padding-left: 20px;
-    outline: none;
+.search-input_container {
     font-family: "Rubik", sans-serif;
     cursor: pointer;
+    width: 80%;
+}
+
+.search-input_container input {
+    border-radius: 15px 0 0 15px;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    width: 100%;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { 
+    display: none; 
 }
 
 #ip-search_form button {
@@ -132,7 +143,7 @@ body {
     }
 
     #ip-search_form input[type="search"] {
-        width: 90%;
+        width: 100%;
         max-width: 640px;
     }
 
